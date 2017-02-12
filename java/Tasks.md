@@ -5,15 +5,15 @@
 palindrome if the string matches the reverse of string.
 Example: 1221 is a palindrome but not 1121.*
 
-[Solution](/src/com/los/Palindrome.java)
-[Tests](/src/com/los/PalindromeTest.java)
+[Solution](/java/src/com/los/Palindrome.java)
+[Tests](/java/src/com/los/PalindromeTest.java)
 
 ### Task 2:
 *Write an efficient algorithm to find K-complementary pairs in a given array of
  integers. Given Array A, pair (i, j) is K- complementary if K = A[i] + A[j];*
 
-[Solution](/src/com/los/ComplementaryPair.java)
-[Tests](/src/com/los/ComplementaryPairTest.java)
+[Solution](/java/src/com/los/ComplementaryPair.java)
+[Tests](/java/src/com/los/ComplementaryPairTest.java)
 
 ### Task 3:
 *Given a large file that does not fit in memory (say 10GB), find the top 100000
@@ -23,5 +23,5 @@ Example: 1221 is a palindrome but not 1121.*
  Microsoft Bing ….
  The above line has 5 phrases in visible region.*
 
-[Solution](/src/com/los/TopPhrases.java)
-[Tests](/src/com/los/TopPhrasesTest.java)
+[Solution](/java//src/com/los/TopPhrases.java)
+[Tests](/java/src/com/los/TopPhrasesTest.java)
