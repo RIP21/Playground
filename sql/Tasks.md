@@ -1,6 +1,6 @@
 # SQL tasks
 
-1. Write a query to rank order the following table in MySQL by votes, display the rank as one of the
+- Write a query to rank order the following table in MySQL by votes, display the rank as one of the
 columns.
 ```sql
 CREATE TABLE votes ( name CHAR(10), votes INT );
@@ -9,14 +9,14 @@ INSERT INTO votes VALUES
  ```
 [Solution](/sql/rank.sql)
 
-2. Write a function to capitalize the first letter of a word in a given string;
+- Write a function to capitalize the first letter of a word in a given string;
    Example:
    ```sql
    SELECT initcap("UNITED states Of AmERIca ") == United States Of America
    ```
 [Solution](/sql/upperCase.sql)
 
-3. Here is the table from bug tracker. Write procedure to show number of still open bugs per date within date range.
+- Here is the table from bug tracker. Write procedure to show number of still open bugs per date within date range.
    ```sql
    CREATE TABLE bugs
    (
@@ -36,4 +36,4 @@ INSERT INTO votes VALUES
    INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-05', '2017-02-11');
    INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-06', null);
    ```
-[Solution](/sql/showOpenBugsInDateRange.sql)
+   [Solution](/sql/showOpenBugsInDateRange.sql)
