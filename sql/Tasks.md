@@ -1,6 +1,6 @@
 # SQL tasks
-
-Write a query to rank order the following table in MySQL by votes, display the rank as one of the columns
+### Task 1:
+*Write a query to rank order the following table in MySQL by votes, display the rank as one of the columns.*
 ```sql
  CREATE TABLE votes ( name CHAR(10), votes INT );
  INSERT INTO votes VALUES
@@ -8,7 +8,8 @@ Write a query to rank order the following table in MySQL by votes, display the r
   ```
  [Solution](/sql/rank.sql)
 
-Write a function to capitalize the first letter of a word in a given string;
+### Task 2:
+*Write a function to capitalize the first letter of a word in a given string.*
 
    Example:
    ```sql
@@ -16,7 +17,8 @@ Write a function to capitalize the first letter of a word in a given string;
    ```
    [Solution](/sql/upperCase.sql)
 
-Here is the table from bug tracker. Write procedure to show number of still open bugs per date within date range.
+### Task 3:
+*Here is the table from bug tracker. Write procedure to show number of still open bugs per date within date range.*
    ```sql
    CREATE TABLE bugs
    (
