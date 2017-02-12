@@ -60,11 +60,6 @@ CREATE PROCEDURE ROWS_OUT_OF_COLUMN(
 
 CALL ROWS_OUT_OF_COLUMN('Julio|Jones|Falcons', '|')
 
-SELECT
-  aTable.id,
-  TEMP.value
-FROM aTable
-  JOIN
 
 
 
