@@ -1,6 +1,6 @@
 # Java tasks
 
-### Task 1:
+### Task 1: Palindrome
 *Write an efficient algorithm to check if a string is a palindrome. A string is a
 palindrome if the string matches the reverse of string.
 Example: 1221 is a palindrome but not 1121.*
@@ -8,14 +8,14 @@ Example: 1221 is a palindrome but not 1121.*
 [Solution](/java/src/com/los/Palindrome.java)
 [Tests](/java/src/com/los/PalindromeTest.java)
 
-### Task 2:
+### Task 2: find K-complementary pairs
 *Write an efficient algorithm to find K-complementary pairs in a given array of
  integers. Given Array A, pair (i, j) is K- complementary if K = A[i] + A[j];*
 
 [Solution](/java/src/com/los/ComplementaryPairs.java)
 [Tests](/java/src/com/los/ComplementaryPairsTest.java)
 
-### Task 3:
+### Task 3: Top phrases count from file
 *Given a large file that does not fit in memory (say 10GB), find the top 100000
  most frequent phrases. The file has 50 phrases per line separated by a pipe (|).
  Assume that the phrases do not contain pipe.
