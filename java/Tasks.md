@@ -12,8 +12,8 @@ Example: 1221 is a palindrome but not 1121.*
 *Write an efficient algorithm to find K-complementary pairs in a given array of
  integers. Given Array A, pair (i, j) is K- complementary if K = A[i] + A[j];*
 
-[Solution](/java/src/com/los/ComplementaryPair.java)
-[Tests](/java/src/com/los/ComplementaryPairTest.java)
+[Solution](/java/src/com/los/ComplementaryPairs.java)
+[Tests](/java/src/com/los/ComplementaryPairsTest.java)
 
 ### Task 3:
 *Given a large file that does not fit in memory (say 10GB), find the top 100000
