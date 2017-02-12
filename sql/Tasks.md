@@ -1,4 +1,6 @@
 # SQL tasks
+Written in MySQL dialect.
+
 ### Task 1:
 *Write a query to rank order the following table in MySQL by votes, display the rank as one of the columns.*
 ```sql
@@ -10,7 +12,6 @@
 
 ### Task 2:
 *Write a function to capitalize the first letter of a word in a given string.*
-
    Example:
    ```sql
    SELECT initcap("UNITED states Of AmERIca ") == United States Of America
@@ -39,3 +40,17 @@
    INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-06', null);
    ```
    [Solution](/sql/showOpenBugsInDateRange.sql)
+
+### Task 4: Solution is pending.
+*Write a procedure in MySQL to split a column into rows using a delimiter.
+For example rows would look like `"3, white", "3, Snow"`*
+```sql
+CREATE TABLE aTable (
+  id   INT,
+  name VARCHAR(50)
+);
+INSERT INTO aTable VALUES
+  (1, 'Smith'), (2, 'Julio|Jones|Falcons'), (3, 'White|Snow'), (4, 'Paint|It|Red'), (5, 'Green|Lantern'),
+  (6, 'Brown|bag');
+```
+[Solution](/sql/columnsFromDelimiters.sql)

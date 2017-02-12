@@ -10,15 +10,14 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class FileReader {
+class TopPhrases {
 
-    static void countAndPrint(String file) {
+    static Map<String, Long> countAndPrint(String file) {
         try (Stream<String> stream = Files.lines(Paths.get(file)).parallel()) {
             Map<String, Long> result = countWordsOccurrences(stream);
-            result = sortAndLimitTop(result);
-            printFrequentPhrases(result);
+            return sortAndLimitTop(result);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
@@ -43,12 +42,4 @@ public class FileReader {
                 ));
     }
 
-    private static void printFrequentPhrases(Map<String, Long> result) {
-        StringBuffer sb = new StringBuffer();
-        sb.append("Most recently used phrases: \n");
-        for (Map.Entry entry : result.entrySet()) {
-            sb.append(String.format("%s : %s \n", entry.getKey(), entry.getValue()));
-        }
-        System.out.println(sb.toString());
-    }
 }

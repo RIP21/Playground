@@ -16,11 +16,7 @@ public class ComplementaryPair {
     private static Map<Integer, Integer> mapElementsOccurrences(int[] array) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int element : array) {
-            if (map.containsKey(element)) {
-                map.put(element, map.get(element) + 1);
-            } else {
-                map.put(element, INITIAL_VALUE);
-            }
+            map.merge(element, INITIAL_VALUE, Integer::sum);
         }
         return map;
     }

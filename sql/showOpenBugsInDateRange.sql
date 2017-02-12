@@ -1,3 +1,7 @@
+/*
+Here is the table from bug tracker. Write procedure to show number of still open bugs per date within date range.
+*/
+
 CREATE TABLE bugs
 (
   id         INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
