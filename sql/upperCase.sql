@@ -1,7 +1,7 @@
 /*
 Write a function to capitalize the first letter of a word in a given string.
 */
-
+DROP FUNCTION IF EXISTS CAPITALIZE_FIRST;
 CREATE FUNCTION CAPITALIZE_FIRST(input VARCHAR(255))
 
   RETURNS VARCHAR(255)

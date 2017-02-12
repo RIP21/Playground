@@ -1,7 +1,7 @@
 /*
 Here is the table from bug tracker. Write procedure to show number of still open bugs per date within date range.
 */
-
+DROP TABLE IF EXISTS bugs;
 CREATE TABLE bugs
 (
   id         INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -11,15 +11,16 @@ CREATE TABLE bugs
 CREATE UNIQUE INDEX bugs_id_uindex
   ON bugs (id);
 
-INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-01', NULL);
-INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-01', NULL);
-INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-02', '2017-02-12');
-INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-02', NULL);
-INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-03', '2017-02-09');
-INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-04', '2017-02-12');
-INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-05', '2017-02-11');
-INSERT INTO `database`.bugs (open_date, close_date) VALUES ('2017-02-06', NULL);
+INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-01', NULL);
+INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-01', NULL);
+INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-02', '2017-02-12');
+INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-02', NULL);
+INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-03', '2017-02-09');
+INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-04', '2017-02-12');
+INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-05', '2017-02-11');
+INSERT INTO bugs (open_date, close_date) VALUES ('2017-02-06', NULL);
 
+DROP PROCEDURE IF EXISTS OPEN_BUGS_IN_DATE_RANGE;
 CREATE PROCEDURE OPEN_BUGS_IN_DATE_RANGE
   (
     IN date_from DATE,

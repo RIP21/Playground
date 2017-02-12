@@ -11,8 +11,8 @@ Written in MySQL dialect.
  [Solution](/sql/rank.sql)
 
 ### Task 2:
-*Write a function to capitalize the first letter of a word in a given string.*
-   Example:
+*Write a function to capitalize the first letter of a word in a given string.
+Example:*
    ```sql
    SELECT initcap("UNITED states Of AmERIca ") == United States Of America
    ```
@@ -41,7 +41,7 @@ Written in MySQL dialect.
    ```
    [Solution](/sql/showOpenBugsInDateRange.sql)
 
-### Task 4: Solution is pending.
+### Task 4:
 *Write a procedure in MySQL to split a column into rows using a delimiter.
 For example rows would look like `"3, white", "3, Snow"`*
 ```sql
@@ -54,3 +54,12 @@ INSERT INTO aTable VALUES
   (6, 'Brown|bag');
 ```
 [Solution](/sql/columnsFromDelimiters.sql)
+
+### Task 4:
+*Given string `'Julio|Jones|Falcons'`Write a function which apply (input, delimiter, position)
+and return string.
+Example:*
+```sql
+SELECT STRING_SPLIT('Julio|Jones|Falcons', '|', 3); /*Returns 'Falcons'*/
+```
+[Solution](/sql/stringSplit.sql)

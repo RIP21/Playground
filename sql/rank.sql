@@ -2,6 +2,7 @@
 Write a query to rank order the following table in MySQL by votes, display the rank as one of the
 columns.
 */
+DROP TABLE IF EXISTS votes;
 
 CREATE TABLE votes ( name CHAR(10), votes INT );
 INSERT INTO votes VALUES
