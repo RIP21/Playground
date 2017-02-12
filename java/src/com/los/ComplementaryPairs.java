@@ -4,7 +4,7 @@ package com.los;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ComplementaryPairs {
+class ComplementaryPairs {
 
     private static final int INITIAL_VALUE = 1;
 

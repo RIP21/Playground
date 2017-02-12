@@ -2,7 +2,7 @@ package com.los;
 
 import java.util.stream.IntStream;
 
-public class Palindrome {
+class Palindrome {
     static boolean isPalindrome(String string) { // O(n/2)
         int stringLength = string.length();
         int midIndex = stringLength / 2;
