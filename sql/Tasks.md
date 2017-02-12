@@ -1,4 +1,4 @@
-## SQL tasks
+# SQL tasks
 
 1. Write a query to rank order the following table in MySQL by votes, display the rank as one of the
 columns.

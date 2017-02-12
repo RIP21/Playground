@@ -1,6 +1,7 @@
 # Playground
 It's just playground to play with languages, algorithms and other stuff and collect them in comprehensive place 
 
-## Java tasks
+## [Java tasks](/java/Tasks.md)
 
-## SQL tasks 
+## [SQL tasks ](/sql/Tasks.md)
+
