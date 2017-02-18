@@ -2,8 +2,9 @@ package com.los;
 
 import java.util.stream.IntStream;
 
-class Palindrome {
-    static boolean isPalindrome(String string) { // O(n/2)
+public class Palindrome {
+
+    public boolean isPalindrome(String string) { // O(n/2)
         if (string == null) {
             return false;
         }

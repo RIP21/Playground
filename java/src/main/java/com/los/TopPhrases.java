@@ -1,6 +1,7 @@
 package com.los;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Comparator;
@@ -13,7 +14,9 @@ import java.util.stream.Stream;
 
 class TopPhrases {
 
-    static Map<String, Long> countTopPhrases(String file) {
+    private PhrasesComparator phrasesComparator = new PhrasesComparator();
+
+    public Map<String, Long> countTopPhrases(String file) {
         try (Stream<String> stream = Files.lines(Paths.get(file)).parallel()) {
             return stream
                     .flatMap(line -> Stream.of(line.split("\\|")))
@@ -22,7 +25,7 @@ class TopPhrases {
                     .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                     .entrySet()
                     .parallelStream()
-                    .sorted((o1, o2) -> new PhrasesComparator().compare(o1, o2))
+                    .sorted(phrasesComparator::compare)
                     .limit(100000)
                     .collect(Collectors.toMap(
                             Entry::getKey,
@@ -31,12 +34,13 @@ class TopPhrases {
                             LinkedHashMap::new)
                     );
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new FailFastException(e);
         }
     }
 }
 
-class PhrasesComparator implements Comparator {
+class PhrasesComparator implements Comparator, Serializable {
+
     @Override
     public int compare(Object o1, Object o2) {
         Entry<String, Long> e1 = (Entry<String, Long>) o1;
@@ -44,5 +48,11 @@ class PhrasesComparator implements Comparator {
         if (e1.getValue().equals(e2.getValue())) {
             return e1.getKey().compareTo(e2.getKey());
         } else return -e1.getValue().compareTo(e2.getValue());
+    }
+}
+
+class FailFastException extends RuntimeException {
+    FailFastException(Exception e) {
+        super(e);
     }
 }

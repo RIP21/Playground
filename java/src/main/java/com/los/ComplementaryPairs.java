@@ -4,24 +4,23 @@ package com.los;
 import java.util.HashMap;
 import java.util.Map;
 
-class ComplementaryPairs {
+public class ComplementaryPairs {
 
-    private static final int INITIAL_VALUE = 1;
-
-    static int findComplementaryPairs(int[] array, int k) {
+    public int findComplementaryPairs(int[] array, int k) {
         Map<Integer, Integer> map = mapElementsOccurrences(array);
         return countPairs(array, k, map);
     }
 
-    private static Map<Integer, Integer> mapElementsOccurrences(int[] array) {
+    private Map<Integer, Integer> mapElementsOccurrences(int[] array) {
         Map<Integer, Integer> map = new HashMap<>();
+        int initialValue = 1;
         for (int element : array) {
-            map.merge(element, INITIAL_VALUE, Integer::sum);
+            map.merge(element, initialValue, Integer::sum);
         }
         return map;
     }
 
-    private static int countPairs(int[] array, int k, Map<Integer, Integer> map) {
+    private int countPairs(int[] array, int k, Map<Integer, Integer> map) {
         int counter = 0;
         for (int element : array) {
             int valueToComplementPair = k - element;

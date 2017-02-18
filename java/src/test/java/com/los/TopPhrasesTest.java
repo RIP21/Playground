@@ -37,7 +37,7 @@ class TopPhrasesTest {
     @Test
     @DisplayName("Working fine with correct input")
     void test1() {
-        Map<String, Long> actual = TopPhrases.countTopPhrases("test.txt");
+        Map<String, Long> actual = new TopPhrases().countTopPhrases("test.txt");
         assertTrue(500000L == actual.get("line"));
         assertTrue(100000 == actual.size());
     }
@@ -45,20 +45,20 @@ class TopPhrasesTest {
     @Test
     @DisplayName("No uppercase symbols in keys")
     void test2() {
-        Map<String, Long> actual = TopPhrases.countTopPhrases("test.txt");
+        Map<String, Long> actual = new TopPhrases().countTopPhrases("test.txt");
         assertTrue(actual.keySet().stream().noneMatch((String key) -> key.matches("[A-Z]+")));
     }
 
     @Test
     @DisplayName("Have phrases not only single words")
     void test3() {
-        Map<String, Long> actual = TopPhrases.countTopPhrases("test.txt");
+        Map<String, Long> actual = new TopPhrases().countTopPhrases("test.txt");
         assertTrue(actual.keySet().stream().anyMatch((String key) -> key.contains(" ")));
     }
 
     @Test
     @DisplayName("Fails fast when input is missing")
     void test4() {
-        assertThrows(RuntimeException.class, () -> TopPhrases.countTopPhrases("notExistfile.txt"));
+        assertThrows(FailFastException.class, () -> new TopPhrases().countTopPhrases("notExistfile.txt"));
     }
 }
