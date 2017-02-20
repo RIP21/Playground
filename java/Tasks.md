@@ -48,3 +48,6 @@ stripHtmlTags("<h1>Hello World!</h1> <p>something</p>") == "Hello World! somethi
 ```
 [Solution](/java/src/main/java/com/los/StringHtmlTags.java)  
 [Tests](/java/src/test/java/com/los/StringHtmlTagsTest.java)
+
+## See also
+### [Codility tasks soultions](/java/Codility.md)
