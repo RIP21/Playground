@@ -3,6 +3,7 @@ package com.los;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PalindromeTest {
@@ -10,6 +11,7 @@ class PalindromeTest {
     @DisplayName("Smoke test")
     void isPalindrome() {
         Palindrome palindromeService = new Palindrome();
+        assertFalse(palindromeService.isPalindrome(null));
         assertTrue(palindromeService.isPalindrome(""));
         assertTrue(palindromeService.isPalindrome("a"));
         assertTrue(palindromeService.isPalindrome("asa"));
@@ -22,5 +24,7 @@ class PalindromeTest {
         }
         assertTrue(palindromeService.isPalindrome(sb.toString()));
     }
+
+
 
 }
