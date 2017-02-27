@@ -5,11 +5,12 @@ import java.util.Arrays;
 public class CyclicRotation {
 
     int[] rotate(int[] array, int cycles) {
-        if (array.length == cycles || array.length == 0) {
+        int arrLength = array.length;
+        if (arrLength == cycles || arrLength == 0) {
             return array;
         }
-        cycles = cycles - (Math.floorDiv(cycles, array.length) * array.length);
-        int rotationIndex = array.length - cycles;
+        cycles = cycles - (Math.floorDiv(cycles, arrLength) * arrLength);
+        int rotationIndex = arrLength - cycles;
         int[] result = sliceRightKeepingSize(array, rotationIndex);
         appendArrayTillIndex(result, array, cycles, rotationIndex);
         return result;

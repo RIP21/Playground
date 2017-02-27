@@ -11,7 +11,8 @@ public class OddOccurrencesInArray {
                 map.put(element, map.getOrDefault(element, 0) + 1);
         }
         for (int key : map.keySet()) {
-            if(map.get(key)%2 == 1) {
+            boolean isOdd = map.get(key) % 2 == 1;
+            if (isOdd) {
                 return key;
             }
         }
