@@ -14,9 +14,8 @@ class FloodDepthTest {
         int[] input4 = new int[]{};
         int[] input5 = new int[]{1,2,3};
         int[] input6 = new int[]{3,2,1};
-        int[] input7 = new int[]{1,2,1,2,1,2,1,20};
-        int[] input8 = new int[]{99999998,0,99999999,99999998,99999999};
-        int[] input9 = new int[]{3,1,2};
+        int[] input7 = new int[]{3, 1, 2};
+        int[] input8 = new int[]{2, 1, 3};
         FloodDepth wf = new FloodDepth();
         //when
         int result1 = wf.getMaximumDepth(input1);
@@ -27,7 +26,6 @@ class FloodDepthTest {
         int result6 = wf.getMaximumDepth(input6);
         int result7 = wf.getMaximumDepth(input7);
         int result8 = wf.getMaximumDepth(input8);
-        int result9 = wf.getMaximumDepth(input9);
         //then
         assertTrue(result1 == 2);
         assertTrue(result2 == 1);
@@ -36,8 +34,7 @@ class FloodDepthTest {
         assertTrue(result5 == 0);
         assertTrue(result6 == 0);
         assertTrue(result7 == 1);
-        assertTrue(result8 == 99999998);
-        assertTrue(result9 == 1);
+        assertTrue(result8 == 1);
     }
 
 }
