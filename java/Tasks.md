@@ -49,5 +49,20 @@ stripHtmlTags("<h1>Hello World!</h1> <p>something</p>") == "Hello World! somethi
 [Solution](/java/src/main/java/com/los/StringHtmlTags.java)  
 [Tests](/java/src/test/java/com/los/StringHtmlTagsTest.java)
 
+### Task 6: InTheFuture
+Peter is solving 5 tasks per day. Evan is solving 6 tasks per day.
+Peter is 1 task ahead. How many days is Evan needs to overtake Peter by solved tasks?  
+Answer: 2 days. 1 day to reach Peters level and another to take the lead.  
+Write function which will take problem solving tempo of Peter and Evan, plus amount of problems Peter is ahead, 
+and returns days needed to take the lead. If it's impossible to take the lead, return -1.
+```java
+int daysToOvertake(int aheadSolveTempo, int behindSolveTempo, int tasksDelta);
+daysToOvertake(3,5,1) == 1;
+daysToOvertake(4,5,1) == 2;
+daysToOvertake(6,5,1) == -1;
+```
+[Solution](/java/src/main/java/com/los/InTheFuture.java)  
+[Tests](/java/src/test/java/com/los/InTheFutureTest.java)
+
 ## See also
 ### [Codility tasks soultions](/java/Codility.md)
