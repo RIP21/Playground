@@ -64,5 +64,11 @@ daysToOvertake(6,5,1) == -1;
 [Solution](/java/src/main/java/com/los/InTheFuture.java)  
 [Tests](/java/src/test/java/com/los/InTheFutureTest.java)
 
+### Task 6: Write simple LFUCache
+Write simple least frequently used cache.
+
+[Solution](/java/src/main/java/com/los/LFUCache.java)  
+[Tests](/java/src/test/java/com/los/LFUCacheTest.java)
+
 ## See also
 ### [Codility tasks soultions](/java/Codility.md)
